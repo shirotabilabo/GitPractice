@@ -1,0 +1,50 @@
+// Gitを使った開発フロー 
+
+@startuml
+
+start
+
+:GitHubのリモートリポジトリをクローンする;
+note right: git clone;
+
+repeat :ファイルを編集する;
+
+:変更の差分を確認する;
+  note left
+    git diff
+    ----
+    最後のコミットとの差分を見る
+    git diff
+    ステージングされた変更と最後のコミットの差分を見る
+    git diff --staged
+    特定のファイルの変更を見る
+    git diff <file-name>
+    特定のコミットとの差分を見る
+    git diff <commit-id>
+    ブランチ間の差分を見る
+    git diff <branch-name>..<branch-name>
+  end note
+
+if (変更に問題はない?) then (Yes)
+
+  :変更をステージングする;
+  note left: git add;
+
+  :変更をコミットする;
+  note left: git commit;
+
+  break
+  endif
+->No;
+repeat while (変更を取り消す)
+
+stop
+
+適当に変更を加えてまーす
+
+ブランチを切ってみた
+
+コミットを進めてみる
+
+@enduml
+
