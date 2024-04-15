@@ -38,7 +38,9 @@ if (変更に問題はない?) then (Yes)
 ->No;
 repeat while (変更を取り消す)
 
-
 stop
+
+適当に
+
 @enduml
 
